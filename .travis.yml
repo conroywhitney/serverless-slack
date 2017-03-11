@@ -1,3 +1,7 @@
+language: node_js
+
+node_js: "6"
+
 addons:
   apt:
     packages:
@@ -6,3 +10,15 @@ addons:
 install:
   - export DISPLAY=':99.0'
   - Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
+
+script:
+  - npm test
+
+cache:
+  directories:
+    - node_modules
+
+notifications:
+  email:
+    on_success: change
+    on_failure: change
