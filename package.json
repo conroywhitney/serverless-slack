@@ -1,0 +1,35 @@
+{
+  "name": "@conroywhitney/serverless-slack",
+  "version": "0.1.0",
+  "description": "Slack tribute using Electron, Vue.js, and the Serverless Framework",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron . --debug",
+    "lint": "standard | snazzy && echo 'lint free \\xF0\\x9F\\x91\\x8D\\n'",
+    "test": "mocha ./**/*.spec.js && npm run lint"
+  },
+  "repository": "https://github.com/conroywhitney/serverless-slack",
+  "keywords": [
+    "electron",
+    "vuejs",
+    "serverless-framework",
+    "demo"
+  ],
+  "author": "Conroy Whitney",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "electron": "^1.4.1",
+    "mocha": "^3.2.0",
+    "snazzy": "^6.0.0",
+    "spectron": "^3.6.0",
+    "standard": "^9.0.1"
+  },
+  "standard": {
+    "env": {
+      "chai": true,
+      "mocha": true
+    }
+  }
+}

@@ -3,6 +3,18 @@
 
 [Slack](https://slack.com/) tribute using [Electron](https://electron.atom.io/), [Vue.js](https://vuejs.org/), and the [Serverless Framework](https://serverless.com/).
 
+# To Use
+
+```
+# Clone this repository
+git clone https://github.com/conroywhitney/serverless-slack
+# Go into the client repository
+cd serverless-slack
+# Install dependencies
+yarn
+# Run the app
+yarn start
+```
 
 ## Credits
 
