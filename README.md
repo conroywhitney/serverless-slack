@@ -5,13 +5,11 @@
 
 # To Use
 
-## Client
-
 ```
 # Clone this repository
 git clone https://github.com/conroywhitney/serverless-slack
 # Go into the client repository
-cd serverless-slack/client
+cd serverless-slack
 # Install dependencies
 yarn
 # Run the app
