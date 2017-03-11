@@ -2,9 +2,9 @@ const Application = require('spectron').Application
 const chai = require('chai')
 const chaiAsPromised = require('chai-as-promised')
 const electron = require('electron')
+const expect = chai.expect
 const path = require('path')
 
-chai.should()
 chai.use(chaiAsPromised)
 
 const timeout = process.env.CI ? 30000 : 10000
@@ -31,10 +31,6 @@ describe('electron app', function () {
     return app.start().then(setupApp)
   }
 
-  const restartApp = function () {
-    return app.restart().then(setupApp)
-  }
-
   before(function () {
     return startApp()
   })
@@ -44,10 +40,10 @@ describe('electron app', function () {
   })
 
   it('opens a window', function () {
-    app.client.getWindowCount().should.eventually.equal(1)
+    expect(app.client.getWindowCount()).to.eventually.eq(1)
   })
 
   it('shows hello world', function () {
-    app.client.waitForVisible('Hello, World!').should.eventually.be.true
+    expect(app.client.waitForVisible('Hello, World!')).to.eventually.eq(true)
   })
 })

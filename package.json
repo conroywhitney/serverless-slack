@@ -6,7 +6,8 @@
   "scripts": {
     "start": "electron .",
     "dev": "electron . --debug",
-    "test": "mocha ./**/*.spec.js"
+    "lint": "standard | snazzy && echo 'lint free \\xF0\\x9F\\x91\\x8D\\n'",
+    "test": "mocha ./**/*.spec.js && npm run lint"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
@@ -23,6 +24,14 @@
     "chai-as-promised": "^6.0.0",
     "electron": "^1.4.1",
     "mocha": "^3.2.0",
-    "spectron": "^3.6.0"
+    "snazzy": "^6.0.0",
+    "spectron": "^3.6.0",
+    "standard": "^9.0.1"
+  },
+  "standard": {
+    "env": {
+      "chai": true,
+      "mocha": true
+    }
   }
 }
