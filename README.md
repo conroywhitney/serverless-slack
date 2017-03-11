@@ -18,7 +18,9 @@ yarn start
 
 ## Credits
 
-Thanks to the teams at Vue.js, Serverless, AWS, Github, and Slack for their work on their respective projects.
+This project was generated from [electron-vue](https://github.com/SimulatedGREG/electron-vue) using [vue-cli](https://github.com/vuejs/vue-cli).
+
+Thanks to the teams at Vue.js, Serverless, AWS, Github, and Slack for their work on their respective projects that make something like this possible.
 
 ## License
 
