@@ -18,7 +18,7 @@ yarn start
 
 ## Credits
 
-This project was generated from [electron-vue](https://github.com/SimulatedGREG/electron-vue) using [vue-cli](https://github.com/vuejs/vue-cli).
+This project was generated from [electron-vue](https://github.com/SimulatedGREG/electron-vue) using [vue-cli](https://github.com/vuejs/vue-cli) and copied heavily from the [vuex chat example](https://github.com/vuejs/vuex/tree/dev/examples/chat).
 
 Thanks to the teams at Vue.js, Serverless, AWS, Github, and Slack for their work on their respective projects that make something like this possible.
 
