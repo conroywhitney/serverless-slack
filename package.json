@@ -6,7 +6,7 @@
   "scripts": {
     "start": "electron .",
     "dev": "electron . --debug",
-    "test": "xvfb-maybe mocha ./**/*.spec.js"
+    "test": "mocha ./**/*.spec.js"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
@@ -23,7 +23,6 @@
     "chai-as-promised": "^6.0.0",
     "electron": "^1.4.1",
     "mocha": "^3.2.0",
-    "spectron": "^3.6.0",
-    "xvfb-maybe": "^0.1.3"
+    "spectron": "^3.6.0"
   }
 }
