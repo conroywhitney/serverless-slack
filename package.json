@@ -1,24 +1,22 @@
 {
-  "name": "electron-quick-start",
-  "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "name": "@conroywhitney/serverless-slack",
+  "version": "0.1.0",
+  "description": "Slack tribute using Electron, Vue.js, and the Serverless Framework",
   "main": "main.js",
   "scripts": {
-    "start": "electron .",
-    "dev": "electron . --debug",
+    "start": "electron . --debug",
     "lint": "standard | snazzy && echo 'lint free \\xF0\\x9F\\x91\\x8D\\n'",
     "test": "mocha ./**/*.spec.js && npm run lint"
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/conroywhitney/serverless-slack",
   "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
+    "electron",
+    "vuejs",
+    "serverless-framework",
     "demo"
   ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "author": "Conroy Whitney",
+  "license": "MIT",
   "devDependencies": {
     "chai": "^3.5.0",
     "chai-as-promised": "^6.0.0",
