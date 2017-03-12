@@ -6,7 +6,7 @@ import Router from 'vue-router'
 import App from './App.vue'
 import routes from './routes'
 import store from './store'
-import { getAllMessages } from './store/actions'
+import { getAllMessages } from './store/chat/actions'
 
 Vue.use(Electron)
 Vue.use(Resource)
