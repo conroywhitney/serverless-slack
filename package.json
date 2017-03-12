@@ -105,6 +105,8 @@
     "karma-webpack": "^2.0.1",
     "mocha": "^3.0.2",
     "require-dir": "^0.3.0",
+    "sinon": "2.0.0-pre.4",
+    "sinon-chai": "^2.8.0",
     "spectron": "^3.4.0",
     "style-loader": "^0.13.1",
     "tree-kill": "^1.1.0",
