@@ -1,4 +1,4 @@
-import awsIot from 'aws-iot-device-sdk'
+import awsIot from './aws-iot-device-sdk'
 import logger from '../utils/logger'
 
 const IoT = {
