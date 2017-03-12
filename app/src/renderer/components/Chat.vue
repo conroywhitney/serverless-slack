@@ -16,6 +16,12 @@ export default {
   components: {
     ThreadSection,
     MessageSection
+  },
+  mounted: function () {
+    this.$store.dispatch('iotConnect')
+  },
+  destroyed: function () {
+    this.$store.dispatch('iotDisconnect')
   }
 }
 </script>
