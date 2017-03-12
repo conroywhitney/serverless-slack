@@ -7,6 +7,8 @@
 
 /* eslint-disable no-console */
 
+require('dotenv').config()
+
 // Set babel `env` and install `babel-register`
 process.env.NODE_ENV = 'development'
 process.env.BABEL_ENV = 'main'
