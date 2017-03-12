@@ -18,14 +18,6 @@ export default {
 
   [types.IOT_DISCONNECT] (state) {
     updateStatus(state, IOT_STATUS.disconnecting)
-  },
-
-  [types.IOT_RECEIVED] (state, { message }) {
-    doNothing()
-  },
-
-  [types.IOT_SEND] (state, { message }) {
-    doNothing()
   }
 }
 
@@ -33,10 +25,4 @@ function updateStatus (state, status) {
   logger('updateStatus', 'status', status)
 
   state.status = status
-}
-
-function doNothing () {
-  logger('doNothing')
-
-  return null
 }
