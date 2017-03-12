@@ -1,7 +1,7 @@
 import sinon from 'sinon'
 import Vue from 'vue'
 
-import Chat from 'renderer/components/Chat'
+import Chat from 'renderer/components/chat/Chat'
 
 describe('Chat.vue', () => {
   let testStore = null
