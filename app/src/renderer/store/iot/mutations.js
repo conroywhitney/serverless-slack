@@ -1,6 +1,6 @@
 import * as types from './mutation-types'
 
-import { IOT_STATUS } from './constants'
+import { IOT_STATUS } from '../../constants/iot'
 import logger from '../../utils/logger'
 
 export default {

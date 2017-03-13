@@ -4,3 +4,5 @@ export const IOT_STATUS = {
   disconnected: 'disconnected',
   disconnecting: 'disconnecting'
 }
+
+export const IOT_TOPIC = 'dev/serverlessslack/chat'

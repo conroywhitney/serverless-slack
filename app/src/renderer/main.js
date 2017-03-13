@@ -6,7 +6,7 @@ import Router from 'vue-router'
 import App from './App.vue'
 import routes from './routes'
 import store from './store'
-import { getAllMessages } from './store/chat/actions'
+import { prefetchMessages } from './store/chat/actions'
 
 Vue.use(Electron)
 Vue.use(Resource)
@@ -28,4 +28,4 @@ new Vue({
   ...App
 }).$mount('#app')
 
-getAllMessages(store)
+prefetchMessages(store)
