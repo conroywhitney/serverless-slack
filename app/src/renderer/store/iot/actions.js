@@ -10,7 +10,7 @@ export async function iotConnect ({ commit, dispatch }, payload) {
   const keysUrl = `${process.env.AWS_IOT_ENDPOINT}/iot/keys`
   const response = await fetch(keysUrl)
   const credentials = await response.json()
-  const topic = 'serverless-slack/chat'
+  const topic = 'dev/serverlessslack/chat'
   const handlers = {
     onClose: () => dispatch('iotClosed'),
     onConnect: () => dispatch('iotConnected'),
