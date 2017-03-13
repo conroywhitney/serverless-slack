@@ -5,7 +5,6 @@ import Chat from 'renderer/components/chat/Chat'
 
 describe('Chat.vue', () => {
   let testStore = null
-  let ChatTest = null
   let component = null
 
   beforeEach(() => {
@@ -13,8 +12,7 @@ describe('Chat.vue', () => {
       dispatch: sinon.spy()
     }
 
-    ChatTest = Vue.extend({ ...Chat, store: testStore })
-    component = new ChatTest()
+    component = new (Vue.extend({ ...Chat, store: testStore }))()
   })
 
   it('connects to IoT when mounted', () => {

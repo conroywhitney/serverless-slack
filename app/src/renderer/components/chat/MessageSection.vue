@@ -1,20 +1,6 @@
-<template>
-  <div class="message-section">
-    <h3 class="message-thread-heading">{{ thread.name }}</h3>
-    <ul class="message-list" ref="list">
-      <message
-        v-for="message in sortedMessages"
-        :key="message.id"
-        :message="message">
-      </message>
-    </ul>
-    <textarea class="message-composer" @keyup.enter="sendMessage"></textarea>
-  </div>
-</template>
-
 <script>
 import Message from './Message.vue'
-import { mapGetters } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 
 export default {
   name: 'MessageSection',
@@ -39,16 +25,28 @@ export default {
     }
   },
   methods: {
-    sendMessage (e) {
+    ...mapActions([
+      'sendMessage'
+    ]),
+    onSubmit (e) {
       const text = e.target.value
-      if (text.trim()) {
-        this.$store.dispatch('sendMessage', {
-          text,
-          thread: this.thread
-        })
-        e.target.value = ''
-      }
+      if (text.trim()) this.sendMessage({ text, thread: this.thread })
+      e.target.value = ''
     }
   }
 }
 </script>
+
+<template>
+  <div class="message-section">
+    <h3 class="message-thread-heading">{{ thread.name }}</h3>
+    <ul class="message-list" ref="list">
+      <message
+        v-for="message in sortedMessages"
+        :key="message.id"
+        :message="message">
+      </message>
+    </ul>
+    <textarea class="message-composer" @keyup.enter="onSubmit"></textarea>
+  </div>
+</template>
