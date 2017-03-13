@@ -1,11 +1,22 @@
+import moment from 'moment'
+
 import * as getters from './getters'
 import * as actions from './actions'
 import mutations from './mutations'
-// import createLogger from '../../../src/plugins/logger'
+
+const defaultThreads = {
+  general: {
+    id: 'general',
+    name: '#general',
+    messages: [],
+    lastMessage: moment()
+  }
+}
 
 const state = {
-  currentThreadID: null,
+  currentThreadID: 'general', // always start in general thread
   threads: {
+    ...defaultThreads
     /*
     id: {
       id,

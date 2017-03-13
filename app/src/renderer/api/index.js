@@ -1,20 +1,20 @@
-import gql from 'graphql-tag'
+// import gql from 'graphql-tag'
 
-import { IOT_TOPIC } from '../constants/iot'
+// import { IOT_TOPIC } from '../constants/iot'
 
 export function fetchAllMessages (cb) {
-  const topic = IOT_TOPIC
+  // const topic = IOT_TOPIC
 
   return {
-    messages: {
-      query: gql`{
-        messages(timestamp: ${0}, topic: "${topic}") {
-          authorName, id, text, threadID, threadName, timestamp
-        }
-      }`,
-      variables: {},
-      pollInterval: 1000 * 30 // 30 seconds
-    }
+    // messages: {
+    //   query: gql`{
+    //     messages(timestamp: ${0}, topic: "${topic}") {
+    //       authorName, id, text, threadID, threadName, timestamp
+    //     }
+    //   }`,
+    //   variables: {},
+    //   pollInterval: 1000 * 30 // 30 seconds
+    // }
   }
 }
 
