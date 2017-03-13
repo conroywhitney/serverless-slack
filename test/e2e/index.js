@@ -1,5 +1,8 @@
 'use strict'
 
+const chai = require('chai')
+const sinonChai = require('sinon-chai')
+
 // Set BABEL_ENV to use proper preset config
 process.env.BABEL_ENV = 'testing-e2e'
 
@@ -8,8 +11,11 @@ require('babel-register')({
   ignore: /node_modules/
 })
 
+// use sinon-chai
+chai.use(sinonChai)
+
 // Attach Chai APIs to global scope
-const { expect, should, assert } = require('chai')
+const { expect, should, assert } = chai
 global.expect = expect
 global.should = should
 global.assert = assert

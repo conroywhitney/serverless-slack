@@ -1,0 +1,6 @@
+export const IOT_CLOSED = 'IOT_CLOSED'
+export const IOT_CONNECT = 'IOT_CONNECT'
+export const IOT_CONNECTED = 'IOT_CONNECTED'
+export const IOT_DISCONNECT = 'IOT_DISCONNECT'
+export const IOT_RECEIVED = 'IOT_RECEIVED'
+export const IOT_SEND = 'IOT_SEND'

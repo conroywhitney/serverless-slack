@@ -1,44 +1,16 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import * as getters from './getters'
-import * as actions from './actions'
-import mutations from './mutations'
-// import createLogger from '../../../src/plugins/logger'
+
+import chat from './chat'
+import iot from './iot'
 
 Vue.use(Vuex)
 
-const state = {
-  currentThreadID: null,
-  threads: {
-    /*
-    id: {
-      id,
-      name,
-      messages: [...ids],
-      lastMessage
-    }
-    */
-  },
-  messages: {
-    /*
-    id: {
-      id,
-      threadId,
-      threadName,
-      authorName,
-      text,
-      timestamp,
-      isRead
-    }
-    */
-  }
-}
-
 export default new Vuex.Store({
-  state,
-  getters,
-  actions,
-  mutations,
+  modules: {
+    chat: chat,
+    iot: iot
+  },
   plugins: process.env.NODE_ENV !== 'production'
     ? []
     : []

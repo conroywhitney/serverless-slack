@@ -2,7 +2,7 @@ export default [
   {
     path: '/',
     name: 'chat',
-    component: require('components/Chat')
+    component: require('components/chat/Chat')
   },
   {
     path: '*',

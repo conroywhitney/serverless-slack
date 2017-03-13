@@ -1,3 +1,15 @@
+import chai from 'chai'
+import sinonChai from 'sinon-chai'
+
+// use sinon-chai
+chai.use(sinonChai)
+
+// Attach Chai APIs to global scope
+const { expect, should, assert } = chai
+global.expect = expect
+global.should = should
+global.assert = assert
+
 // require all test files (files that ends with .spec.js)
 const testsContext = require.context('./specs', true, /\.spec$/)
 testsContext.keys().forEach(testsContext)

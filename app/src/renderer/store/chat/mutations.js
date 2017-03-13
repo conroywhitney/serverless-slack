@@ -53,9 +53,6 @@ function addMessage (state, message) {
 
 function setCurrentThread (state, id) {
   state.currentThreadID = id
-  if (!state.threads[id]) {
-    debugger
-  }
   // mark thread as read
   state.threads[id].lastMessage.isRead = true
 }
