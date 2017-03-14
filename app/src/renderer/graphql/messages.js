@@ -1,4 +1,5 @@
 import gql from 'graphql-tag'
+import { map, prop } from 'ramda'
 
 import apollo from './apollo'
 
@@ -8,15 +9,16 @@ export default {
   async fetchAll () {
     const query = gql`{
       messages(timestamp: ${0}, topic: "${IOT_TOPIC}") {
-        authorName, id, text, threadID, threadName, timestamp
+        payload { authorName, id, text, threadID, threadName, timestamp }
       }
     }`
 
     const response = await apollo.query({ query })
     const { messages } = await response.data
+    const extractPayload = map(prop('payload'))
 
     console.log('graphql', 'messages', 'fetchAll', 'messages', messages)
 
-    return messages
+    return extractPayload(messages)
   }
 }
