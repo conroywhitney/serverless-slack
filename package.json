@@ -120,5 +120,7 @@
     "webpack-dev-server": "^2.3.0",
     "webpack-merge": "^2.4.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "babel-polyfill": "^6.23.0"
+  }
 }

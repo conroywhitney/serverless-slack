@@ -10,6 +10,7 @@ export default {
   },
   mounted: function () {
     this.$store.dispatch('iotConnect')
+    this.$store.dispatch('fetchAllMessages')
   },
   destroyed: function () {
     this.$store.dispatch('iotDisconnect')

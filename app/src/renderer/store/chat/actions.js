@@ -1,12 +1,16 @@
-import { createMessage, fetchAllMessages } from '../../api'
+import { createMessage } from '../../api'
 import * as types from './mutation-types'
 
-export const prefetchMessages = ({ commit }) => {
-  fetchAllMessages(messages => {
-    commit(types.RECEIVE_ALL, {
-      messages
-    })
-  })
+import messageApi from '../../graphql/messages'
+
+export async function fetchAllMessages ({ dispatch }) {
+  const messages = await messageApi.fetchAll()
+
+  dispatch('receiveAllMessages', { messages })
+}
+
+export const receiveAllMessages = ({ commit }, { messages }) => {
+  commit(types.RECEIVE_ALL_MESSAGES, { messages })
 }
 
 export const sendMessage = ({ commit, dispatch }, { text, thread }) =>

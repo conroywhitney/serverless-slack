@@ -5,12 +5,13 @@ import Router from 'vue-router'
 
 import App from './App.vue'
 import routes from './routes'
-import store from './store'
-import { prefetchMessages } from './store/chat/actions'
+
+if (!global._babelPolyfill) { require('babel-polyfill') }
 
 Vue.use(Electron)
 Vue.use(Resource)
 Vue.use(Router)
+
 Vue.config.debug = true
 
 Vue.filter('time', timestamp => {
@@ -27,5 +28,3 @@ new Vue({
   router,
   ...App
 }).$mount('#app')
-
-prefetchMessages(store)
