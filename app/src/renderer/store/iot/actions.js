@@ -24,9 +24,9 @@ export const iotConnected = ({ commit }) => commit(types.IOT_CONNECTED)
 
 export const iotDisconnect = () => IoT.disconnect()
 
-export const iotMessage = ({ dispatch }, { message }) =>
+export const iotMessage = ({ dispatch }, message) =>
   dispatch('receiveMessage', { message })
 
 export function iotSend ({ commit }, { message }) {
-  IoT.send(JSON.stringify({ message }))
+  IoT.send(JSON.stringify(message))
 }
